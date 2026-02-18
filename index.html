@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katy's Bloom · kreativní květinová aranžmá</title>
+  <!-- SEO meta -->
+  <meta name="description" content="Katy's Bloom vytváří snová květinová aranžmá pro svatby, večírky i radost všedních dní. Prohlédněte si galerii a reels.">
+  <meta name="keywords" content="květinová aranžmá, květinová dekorace, svatební květiny, výzdoba akcí, kreativní floristka, reels, kontakt, ceník">
+  <meta name="author" content="Katy's Bloom">
+  <!-- favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='30' r='15' fill='%23ffb6c1'/%3E%3Ccircle cx='30' cy='50' r='15' fill='%23ffb6c1'/%3E%3Ccircle cx='70' cy='50' r='15' fill='%23ffb6c1'/%3E%3Ccircle cx='50' cy='70' r='15' fill='%23ffb6c1'/%3E%3Ccircle cx='50' cy='50' r='20' fill='%23ff69b4'/%3E%3C/svg%3E">
+  <!-- Google Fonts + Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Analytics (nahraďte vlastním ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+</head>
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="#"><i class="fas fa-seedling"></i> Katy's Bloom</a>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#home">Domů</a></li>
+        <li><a href="#about">O mně</a></li>
+        <li><a href="#services">Služby</a></li>
+        <li><a href="#prices">Ceník</a></li>
+        <li><a href="#gallery">Galerie</a></li>
+        <li><a href="#reels">Reels</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SLIDESHOW ===== -->
+  <section id="home" class="hero">
+    <div class="slideshow-container">
+      <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+      <a class="next" onclick="changeSlide(1)">&#10095;</a>
+      <div class="dots-container" id="dots"></div>
+    </div>
+    <div class="hero-overlay-text">
+      <h1>květiny, které vyprávějí příběhy</h1>
+      <p>umělecká aranžmá pro každou chvíli</p>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="about section-padding">
+    <div class="container">
+      <h2 class="section-title">ahoj, jsem Katy</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>Věřím, že květiny jsou poezií přírody. S backgroundem v umění a vášní pro okvětní lístky tvořím snová, originální aranžmá, která promění každý prostor v pocit. Od intimních kytic po velké instalace na akce – každý kus je ručně vyrobený s láskou, hravostí a špetkou jiskry.</p>
+          <p>Můj styl? Jemný, romantický a trochu divoký – přesně jako zahrada po jarním dešti. Působím v Praze a spolupracuji s lokálními farmáři, abych vám nabídla ty nejčerstvější květy, vždy s ohledem na udržitelnost.</p>
+          <p><i class="fas fa-ribbon"></i> Svatby · akce · radost všedních dní</p>
+        </div>
+        <div class="about-image">
+          <img src="img/profilepic.jpg" alt="floristka aranžuje květiny" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services" class="services section-pink">
+    <div class="container">
+      <h2 class="section-title">co tvořím</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="fas fa-ring"></i>
+          <h3>Svatby</h3>
+          <p>Kytice, oblouky, prostírání – pojďme navrhnout váš vysněný den.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-calendar-alt"></i>
+          <h3>Akce & večírky</h3>
+          <p>Firemní večírky, oslavy narozenin či baby shower – naladíme tu správnou atmosféru.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-home"></i>
+          <h3>Dekorace domova</h3>
+          <p>Sezónní aranžmá, která rozkvetou váš interiér.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-gem"></i>
+          <h3>Workshopy</h3>
+          <p>Naučte se tvořit vlastní květinová umění (pop-up kurzy).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CENÍK (PRICES) ===== -->
+  <section id="prices" class="prices section-padding">
+    <div class="container">
+      <h2 class="section-title">ceník</h2>
+      <p class="section-subtitle">vyberte si balíček šitý na míru</p>
+      <div class="prices-grid">
+        <div class="price-card">
+          <h3>Mini</h3>
+          <p class="price">2 500 Kč</p>
+          <ul>
+            <li>kyticová dekorace</li>
+            <li>konzultace zdarma</li>
+            <li>doprava po Praze</li>
+          </ul>
+          <a href="#contact" class="btn-price">Poptat</a>
+        </div>
+        <div class="price-card featured">
+          <h3>Classic</h3>
+          <p class="price">4 900 Kč</p>
+          <ul>
+            <li>svatební kytice + ozdoba</li>
+            <li>stolní aranžmá (5 ks)</li>
+            <li>doprava a instalace</li>
+          </ul>
+          <a href="#contact" class="btn-price">Poptat</a>
+        </div>
+        <div class="price-card">
+          <h3>Premium</h3>
+          <p class="price">8 900 Kč</p>
+          <ul>
+            <li>kompletní výzdoba akce</li>
+            <li>květinový oblouk</li>
+            <li>dekorace pro hosty</li>
+          </ul>
+          <a href="#contact" class="btn-price">Poptat</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY (videa) ===== -->
+  <section id="gallery" class="gallery section-padding">
+    <div class="container">
+      <h2 class="section-title">video galerie</h2>
+      <p class="section-subtitle">krátké ukázky z poslední tvorby</p>
+      <div class="gallery-grid">
+        <div class="video-card" data-video-src="img/secondreel.mp4">
+          <div class="video-thumb" style="background-image: url('https://images.unsplash.com/photo-1561181286-d3f65c1d9c4a?w=600&auto=format');">
+            <i class="fas fa-play-circle"></i>
+          </div>
+          <p>rustikální tabule</p>
+        </div>
+        <div class="video-card" data-video-src="https://www.w3schools.com/html/mov_bbb.mp4">
+          <div class="video-thumb" style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format');">
+            <i class="fas fa-play-circle"></i>
+          </div>
+          <p>svatební kytice</p>
+        </div>
+        <div class="video-card" data-video-src="https://www.w3schools.com/html/mov_bbb.mp4">
+          <div class="video-thumb" style="background-image: url('https://images.unsplash.com/photo-1599619351208-3e6c839d6828?w=600&auto=format');">
+            <i class="fas fa-play-circle"></i>
+          </div>
+          <p>květinová instalace</p>
+        </div>
+        <div class="video-card" data-video-src="https://www.w3schools.com/html/mov_bbb.mp4">
+          <div class="video-thumb" style="background-image: url('https://images.unsplash.com/photo-1567696153798-9111f9cd3d0d?w=600&auto=format');">
+            <i class="fas fa-play-circle"></i>
+          </div>
+          <p>jarní dekorace</p>
+        </div>
+        <div class="video-card" data-video-src="https://www.w3schools.com/html/mov_bbb.mp4">
+          <div class="video-thumb" style="background-image: url('https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?w=600&auto=format');">
+            <i class="fas fa-play-circle"></i>
+          </div>
+          <p>pivoňková nádhera</p>
+        </div>
+        <div class="video-card" data-video-src="https://www.w3schools.com/html/mov_bbb.mp4">
+          <div class="video-thumb" style="background-image: url('https://images.unsplash.com/photo-1563241527-3004b7be0ffd?w=600&auto=format');">
+            <i class="fas fa-play-circle"></i>
+          </div>
+          <p>zákulisí natáčení</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== KONTAKTNÍ FORMULÁŘ ===== -->
+  <section id="contact" class="contact section-padding">
+    <div class="container">
+      <h2 class="section-title">napište mi</h2>
+      <p class="section-subtitle">máte otázku nebo nápad? jsem celá uši!</p>
+      <div class="contact-wrapper">
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <label for="name">jméno *</label>
+            <input type="text" id="name" name="name" placeholder="vaše jméno" required>
+          </div>
+          <div class="form-group">
+            <label for="email">e-mail *</label>
+            <input type="email" id="email" name="email" placeholder="vaše@email.cz" required>
+          </div>
+          <div class="form-group">
+            <label for="message">zpráva *</label>
+            <textarea id="message" name="message" rows="5" placeholder="co byste chtěli vědět?" required></textarea>
+          </div>
+          <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> odeslat</button>
+        </form>
+        <div class="contact-info">
+          <h3>nebo mě najdete</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Praha & okolí</p>
+          <p><i class="fas fa-phone-alt"></i> +420 777 123 456</p>
+          <p><i class="fas fa-envelope"></i> ahoj@katysbloom.cz</p>
+          <p class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <i class="fas fa-seedling"></i> Katy's Bloom
+      </div>
+      <div class="social-links">
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+      </div>
+      <div class="footer-credit">
+        <p>designed by <span>manuel jordan</span> · © 2026 Katy's Bloom</p>
+        <p><i class="fas fa-heart" style="color:#f28482;"></i> květiny dělají lidi šťastnými</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== LIGHTBOX MODAL ===== -->
+  <div id="videoModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div class="modal-video-container">
+        <video id="modalVideo" controls></video>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+  <!-- mobilní hamburger menu + formulář -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('✨ Děkujeme za zprávu! Katy se ozve co nejdříve. (Toto je demo verze, formulář zatím neodesílá e-maily.)');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
