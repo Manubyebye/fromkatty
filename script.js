@@ -287,12 +287,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ===== FORMULÁŘ =====
-  document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Děkuji za zprávu! Ozvu se co nejdříve.');
-    this.reset();
-  });
+    // ===== FORMULÁŘ PRO NETLIFY =====
+  const contactForm = document.getElementById('contactForm');
+  
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      // Don't prevent default - let Netlify handle it
+      // Just show a loading state or success message
+      
+      // Optional: Show loading state
+      const submitBtn = this.querySelector('.btn-submit');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> odesílám...';
+      submitBtn.disabled = true;
+      
+      // Netlify will handle the rest
+      // The page will redirect to a success page or show Netlify's default success message
+      
+      // Re-enable after 3 seconds in case of error (optional)
+      setTimeout(() => {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+      }, 3000);
+    });
+  }
+
 
   // ===== FADE-IN EFFECT =====
   const sections = document.querySelectorAll('section');

@@ -188,8 +188,8 @@
         <img src="img/redlove.jfif" loading="lazy" alt="bílé růže">
         <img src="img/rosasred.jfif" loading="lazy" alt="krémová růže">
         <img src="img/bluecorona.jfif" loading="lazy" alt="růže 10">
-        <img src="img/ruzekrabice1.jfif" loading="lazy" alt="dárková krabice s růžemi">
-        <img src="img/ruzearanzma1.jfif" loading="lazy" alt="aranžmá z růží">
+        <img src="img/redcrismt.jfif" loading="lazy" alt="dárková krabice s růžemi">
+        <img src="img/recimopink.jfif" loading="lazy" alt="aranžmá z růží">
       </div>
       <a href="#" class="btn-gallery" id="viewAllRoses">zobrazit celou galerii</a>
     </div>
@@ -212,7 +212,7 @@
         <img src="img/venec4.jfif" loading="lazy" alt="věnec na dveře podzim">
         <img src="img/venec6.jfif" loading="lazy" alt="dušičky dekorace">
         <img src="img/venec7.jfif" loading="lazy" alt="podzimní dekorace">
-        <img src="img/svicky3.jfif" loading="lazy" alt="svícen podzimní">
+        <img src="img/dontknow.jfif" loading="lazy" alt="svícen podzimní">
       </div>
       <a href="#" class="btn-gallery" id="viewAllAutumn">zobrazit celou galerii</a>
     </div>
@@ -223,26 +223,26 @@
     <div class="container">
       <h2 class="section-title">videa · <span class="highlight">tvorba</span></h2>
       <div class="video-reels">
-        <div class="reel-item" data-video-src="https://www.w3schools.com/html/mov_bbb.mp4">
-          <div class="reel-thumb" style="background-image: url('img/pinkcorona.jfif');">
+        <div class="reel-item" data-video-src="img/rosesromantic.mp4">
+          <div class="reel-thumb" style="background-image: url('img/redlove.jfif');">
             <i class="fas fa-play-circle"></i>
           </div>
           <p>jak balím růže</p>
         </div>
-        <div class="reel-item" data-video-src="https://www.w3schools.com/html/mov_bbb.mp4">
-          <div class="reel-thumb" style="background-image: url('img/venec5.jfif');">
+        <div class="reel-item" data-video-src="img/50ČERVENÝCHBLÝSKAVÝCHRŮŽÍ.mp4">
+          <div class="reel-thumb" style="background-image: url('img/rojacorona.jfif');">
             <i class="fas fa-play-circle"></i>
           </div>
           <p>věnce na dušičky</p>
         </div>
-        <div class="reel-item" data-video-src="https://www.w3schools.com/html/mov_bbb.mp4">
-          <div class="reel-thumb" style="background-image: url('img/visen.jfif');">
+        <div class="reel-item" data-video-src="img/romantic2.mp4">
+          <div class="reel-thumb" style="background-image: url('img/rosasred.jfif');">
             <i class="fas fa-play-circle"></i>
           </div>
           <p>růže ve skle</p>
         </div>
-        <div class="reel-item" data-video-src="https://www.w3schools.com/html/mov_bbb.mp4">
-          <div class="reel-thumb" style="background-image: url('img/venec2.jfif');">
+        <div class="reel-item" data-video-src="img/raffik.mp4">
+          <div class="reel-thumb" style="background-image: url('img/rosasros.jfif');">
             <i class="fas fa-play-circle"></i>
           </div>
           <p>podzimní tvorba</p>
@@ -251,13 +251,14 @@
     </div>
   </section>
 
-  <!-- ===== KONTAKT ===== -->
+    <!-- ===== KONTAKT ===== -->
   <section id="contact" class="contact section-padding">
     <div class="container">
       <h2 class="section-title">napište <span class="highlight">mi</span></h2>
       <p class="section-subtitle">jsem tu pro vás</p>
       <div class="contact-wrapper">
-        <form id="contactForm" class="contact-form" netlify>
+        <form id="contactForm" class="contact-form" method="POST" netlify data-netlify="true" name="contact">
+          <input type="hidden" name="form-name" value="contact" />
           <div class="form-group">
             <label for="name">jméno *</label>
             <input type="text" id="name" name="name" required>
@@ -270,6 +271,7 @@
             <label for="message">zpráva *</label>
             <textarea id="message" name="message" rows="4" required></textarea>
           </div>
+          <div data-netlify-recaptcha="true" style="margin-bottom: 1rem;"></div>
           <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> odeslat</button>
         </form>
         <div class="contact-info">
@@ -293,7 +295,7 @@
   <!-- ===== FOOTER ===== -->
   <footer>
     <div class="footer-content">
-      <div class="footer-logo"><i class="fas fa-ribbon spinning"></i>fromKattie</div>
+      <div class="footer-logo"><i class="fas fa-ribbon spinning"></i> fromKattie</div>
       <div class="footer-credit">
         <p>&copy; 2026 Kateřina Slunečková · ruční tvorba Praha</p>
       </div>
