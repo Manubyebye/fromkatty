@@ -3,43 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Katy's Bloom · kreativní květinová aranžmá</title>
+  <title>fromKattie · ručně vázané stuhové růže</title>
   <!-- SEO meta -->
-  <meta name="description" content="Katy's Bloom vytváří snová květinová aranžmá pro svatby, večírky i radost všedních dní. Prohlédněte si galerii a reels.">
-  <meta name="keywords" content="květinová aranžmá, květinová dekorace, svatební květiny, výzdoba akcí, kreativní floristka, reels, kontakt, ceník">
-  <meta name="author" content="Katy's Bloom">
+  <meta name="description" content="Kreativní tvorba ze saténových stuh – růže, dušičkové věnce, svícny a dekorace. Vlastní tvorba Kateřiny Slunečkové.">
+  <meta name="keywords" content="stuhové růže, saténové růže, květiny ze stuh, dušičkové věnce, svícny, dekorace, Praha, ruční práce, fromkattie">
+  <meta name="author" content="Kateřina Slunečková - fromKattie">
   <!-- favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='30' r='15' fill='%23ffb6c1'/%3E%3Ccircle cx='30' cy='50' r='15' fill='%23ffb6c1'/%3E%3Ccircle cx='70' cy='50' r='15' fill='%23ffb6c1'/%3E%3Ccircle cx='50' cy='70' r='15' fill='%23ffb6c1'/%3E%3Ccircle cx='50' cy='50' r='20' fill='%23ff69b4'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='30' fill='%23f4a3a3'/%3E%3Cpath d='M35 30 Q50 10 65 30 Q70 45 50 60 Q30 45 35 30' fill='%23d9648c'/%3E%3C/svg%3E">
   <!-- Google Fonts + Font Awesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
-  <!-- Google Analytics (nahraďte vlastním ID) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
 </head>
 <body>
   <!-- ===== NAVBAR ===== -->
   <nav class="navbar">
     <div class="nav-container">
       <div class="logo">
-        <a href="#"><i class="fas fa-seedling"></i> Katy's Bloom</a>
+        <a href="#"><i class="fas fa-ribbon"></i> fromKattie</a>
       </div>
       <ul class="nav-menu">
         <li><a href="#home">Domů</a></li>
         <li><a href="#about">O mně</a></li>
-        <li><a href="#services">Služby</a></li>
-        <li><a href="#prices">Ceník</a></li>
-        <li><a href="#gallery">Galerie</a></li>
-        <li><a href="#reels">Reels</a></li>
+        <li><a href="#services">Co tvořím</a></li>
+        <li><a href="#ruze">Růže · objednat</a></li>
+        <li><a href="#gallery-pictures">Fotogalerie</a></li>
+        <li><a href="#podzim">Dušičky & podzim</a></li>
+        <li><a href="#videos">Videa</a></li>
         <li><a href="#contact">Kontakt</a></li>
       </ul>
       <div class="hamburger">
@@ -50,233 +43,273 @@
     </div>
   </nav>
 
-  <!-- ===== HERO SLIDESHOW ===== -->
-  <section id="home" class="hero">
+  <!-- ===== HERO ===== -->
+  <section id="home" class="hero short-hero">
     <div class="slideshow-container">
       <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
       <a class="next" onclick="changeSlide(1)">&#10095;</a>
       <div class="dots-container" id="dots"></div>
     </div>
-    <div class="hero-overlay-text">
-      <h1>květiny, které vyprávějí příběhy</h1>
-      <p>umělecká aranžmá pro každou chvíli</p>
+    <div class="hero-overlay">
+      <h1 class="hero-title">from<span class="highlight">Kattie</span></h1>
+      <p class="hero-subtitle">ručně vázané stuhové růže</p>
     </div>
   </section>
 
   <!-- ===== ABOUT ===== -->
   <section id="about" class="about section-padding">
     <div class="container">
-      <h2 class="section-title">ahoj, jsem Katy</h2>
+      <h2 class="section-title">Jsem <span class="highlight">Katka</span></h2>
       <div class="about-content">
         <div class="about-text">
-          <p>Věřím, že květiny jsou poezií přírody. S backgroundem v umění a vášní pro okvětní lístky tvořím snová, originální aranžmá, která promění každý prostor v pocit. Od intimních kytic po velké instalace na akce – každý kus je ručně vyrobený s láskou, hravostí a špetkou jiskry.</p>
-          <p>Můj styl? Jemný, romantický a trochu divoký – přesně jako zahrada po jarním dešti. Působím v Praze a spolupracuji s lokálními farmáři, abych vám nabídla ty nejčerstvější květy, vždy s ohledem na udržitelnost.</p>
-          <p><i class="fas fa-ribbon"></i> Svatby · akce · radost všedních dní</p>
+          <p>Vyrábím <strong>saténové růže ze stuhy</strong> – různý počet, různé barvy, krabičky, skleničky, dárkové boxy. Každá růže je originál, ručně tvarovaná s citem pro detail. Ceny začínají už od 50 Kč.</p>
+          <p>Na podzim a v období Dušiček tvořím <strong>dušičkové věnce, věnce na dveře, svícny, štoly a podzimní dekorace</strong>. Používám přírodní materiály v kombinaci se stuhou, aby výzdoba nesla klid a vzpomínku.</p>
+          <p>Vše vzniká v Praze s láskou k řemeslu a vůní stuh. Podívejte se na fotky a vyberte si svou růži – nebo mi napište svůj nápad.</p>
+          <p><i class="fas fa-heart" style="color: #e8a2a4;"></i> osobní přístup · kvalitní provedení · Praha a okolí</p>
         </div>
         <div class="about-image">
-          <img src="img/profilepic.jpg" alt="floristka aranžuje květiny" loading="lazy">
+          <img src="img/profilepic.jpg" alt="Kateřina - ruční práce" loading="lazy">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== SERVICES ===== -->
+  <!-- ===== CO TVOŘÍM ===== -->
   <section id="services" class="services section-pink">
     <div class="container">
-      <h2 class="section-title">co tvořím</h2>
+      <h2 class="section-title">Co <span class="highlight">tvořím</span></h2>
       <div class="services-grid">
         <div class="service-card">
-          <i class="fas fa-ring"></i>
-          <h3>Svatby</h3>
-          <p>Kytice, oblouky, prostírání – pojďme navrhnout váš vysněný den.</p>
+          <i class="fas fa-seedling"></i>
+          <h3>Saténové růže</h3>
+          <p>Jednotlivé růže, kytice, růže ve skle, dárkové krabičky – na přání namíchám barvy i velikost.</p>
         </div>
         <div class="service-card">
-          <i class="fas fa-calendar-alt"></i>
-          <h3>Akce & večírky</h3>
-          <p>Firemní večírky, oslavy narozenin či baby shower – naladíme tu správnou atmosféru.</p>
+          <i class="fas fa-hanukiah"></i>
+          <h3>Dušičky & podzim</h3>
+          <p>Věnce na hrob, štoly, svícny a dveřní dekorace. Důstojné, jemné, vyrobené s respektem.</p>
         </div>
         <div class="service-card">
-          <i class="fas fa-home"></i>
-          <h3>Dekorace domova</h3>
-          <p>Sezónní aranžmá, která rozkvetou váš interiér.</p>
+          <i class="fas fa-door-open"></i>
+          <h3>Dekorace domů</h3>
+          <p>Věnce na dveře, adventní svícny, stolní aranžmá – rozjasní každý kout.</p>
         </div>
         <div class="service-card">
-          <i class="fas fa-gem"></i>
-          <h3>Workshopy</h3>
-          <p>Naučte se tvořit vlastní květinová umění (pop-up kurzy).</p>
+          <i class="fas fa-gift"></i>
+          <h3>Dárky na míru</h3>
+          <p>Narozeninové překvapení, poděkování, valentýnky… stačí říct barvu a já ji stvořím.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== CENÍK (PRICES) ===== -->
-  <section id="prices" class="prices section-padding">
+  <!-- ===== OBJEDNÁVKA RŮŽÍ ===== -->
+  <section id="ruze" class="order-section section-padding">
     <div class="container">
-      <h2 class="section-title">ceník</h2>
-      <p class="section-subtitle">vyberte si balíček šitý na míru</p>
-      <div class="prices-grid">
-        <div class="price-card">
-          <h3>Mini</h3>
-          <p class="price">2 500 Kč</p>
-          <ul>
-            <li>kyticová dekorace</li>
-            <li>konzultace zdarma</li>
-            <li>doprava po Praze</li>
-          </ul>
-          <a href="#contact" class="btn-price">Poptat</a>
+      <h2 class="section-title">Růže ze stuhy · <span class="highlight">objednat</span></h2>
+      <p class="section-subtitle">vyber počet a barvu, cena se dopočítá (ks 100–150 Kč)</p>
+      <div class="order-row">
+        <div class="order-image">
+          <img src="img/rojacorona.jfif" alt="saténová růže" id="previewRose">
         </div>
-        <div class="price-card featured">
-          <h3>Classic</h3>
-          <p class="price">4 900 Kč</p>
-          <ul>
-            <li>svatební kytice + ozdoba</li>
-            <li>stolní aranžmá (5 ks)</li>
-            <li>doprava a instalace</li>
-          </ul>
-          <a href="#contact" class="btn-price">Poptat</a>
-        </div>
-        <div class="price-card">
-          <h3>Premium</h3>
-          <p class="price">8 900 Kč</p>
-          <ul>
-            <li>kompletní výzdoba akce</li>
-            <li>květinový oblouk</li>
-            <li>dekorace pro hosty</li>
-          </ul>
-          <a href="#contact" class="btn-price">Poptat</a>
+        <div class="order-controls">
+          <div class="color-selectors">
+            <div class="color-item" data-color="červená" data-image="img/rojacorona.jfif">
+              <span class="color-dot" style="background: #b22222;"></span>
+              <span class="color-name">Červená</span>
+              <div class="color-counter">
+                <button class="counter-btn minus" data-color="červená">−</button>
+                <span class="counter-value" id="count-červená">0</span>
+                <button class="counter-btn plus" data-color="červená">+</button>
+              </div>
+            </div>
+            <div class="color-item" data-color="růžová" data-image="img/pinkbonit.jfif">
+              <span class="color-dot" style="background: #ffb6c1;"></span>
+              <span class="color-name">Růžová</span>
+              <div class="color-counter">
+                <button class="counter-btn minus" data-color="růžová">−</button>
+                <span class="counter-value" id="count-růžová">0</span>
+                <button class="counter-btn plus" data-color="růžová">+</button>
+              </div>
+            </div>
+            <div class="color-item" data-color="bílá" data-image="img/whiterose.jpg">
+              <span class="color-dot" style="background: #fff0f0; border: 1px solid #ccc;"></span>
+              <span class="color-name">Bílá</span>
+              <div class="color-counter">
+                <button class="counter-btn minus" data-color="bílá">−</button>
+                <span class="counter-value" id="count-bílá">0</span>
+                <button class="counter-btn plus" data-color="bílá">+</button>
+              </div>
+            </div>
+            <div class="color-item" data-color="krémová" data-image="img/kremova.jpg">
+              <span class="color-dot" style="background: #f5e6d3;"></span>
+              <span class="color-name">Krémová</span>
+              <div class="color-counter">
+                <button class="counter-btn minus" data-color="krémová">−</button>
+                <span class="counter-value" id="count-krémová">0</span>
+                <button class="counter-btn plus" data-color="krémová">+</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="price-calc">
+            <p>Celkový počet: <strong id="totalCount">0</strong> ks</p>
+            <p>Cena celkem: <span id="totalPrice">0</span> Kč</p>
+          </div>
+          <button class="btn-order" id="generateOrder"><i class="fas fa-shopping-basket"></i> Vytvořit objednávku</button>
+          <div class="payment-details" id="paymentDetails" style="display: none;">
+            <p>Číslo účtu: <strong>2403037528 / 2010</strong> (Fio banka)</p>
+            <p>Do zprávy uveďte: <span id="orderReference"></span></p>
+            <p>QR platba:</p>
+            <div id="qrContainer">
+              <img src="" alt="QR kód" id="qrImage">
+            </div>
+            <p class="small">⚠️ QR kód obsahuje číslo účtu, částku i zprávu pro příjemce. Stačí naskenovat a platba se předvyplní.</p>
+            <p class="small">Po odeslání platby mi prosím napište zprávu pro domluvu detailů.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== GALLERY (videa) ===== -->
-  <section id="gallery" class="gallery section-padding">
+  <!-- ===== FOTOGALERIE RŮŽÍ ===== -->
+  <section id="gallery-pictures" class="gallery section-padding">
     <div class="container">
-      <h2 class="section-title">video galerie</h2>
-      <p class="section-subtitle">krátké ukázky z poslední tvorby</p>
-      <div class="gallery-grid">
-        <div class="video-card" data-video-src="img/secondreel.mp4">
-          <div class="video-thumb" style="background-image: url('https://images.unsplash.com/photo-1561181286-d3f65c1d9c4a?w=600&auto=format');">
+      <h2 class="section-title">Galerie <span class="highlight">růží</span></h2>
+      <p class="section-subtitle">ukázky mé tvorby – od 50 Kč</p>
+      <div class="gallery-grid" id="roseGallery">
+        <img src="img/bonita1" loading="lazy" alt="růže 1">
+        <img src="img/pinkbonit.jfif" loading="lazy" alt="růže 2">
+        <img src="img/rojacorona.jfif" loading="lazy" alt="krabička s růží">
+        <img src="img/visen.jfif" loading="lazy" alt="sklenice s růžemi">
+        <img src="img/bonita2.jfif" loading="lazy" alt="kytica stuhových růží">
+        <img src="img/pinkcorona.jfif" loading="lazy" alt="růžová dekorace">
+        <img src="img/bonita3.jfif" loading="lazy" alt="červená růže detail">
+        <img src="img/redlove.jfif" loading="lazy" alt="bílé růže">
+        <img src="img/rosasred.jfif" loading="lazy" alt="krémová růže">
+        <img src="img/bluecorona.jfif" loading="lazy" alt="růže 10">
+        <img src="img/ruzekrabice1.jfif" loading="lazy" alt="dárková krabice s růžemi">
+        <img src="img/ruzearanzma1.jfif" loading="lazy" alt="aranžmá z růží">
+      </div>
+      <a href="#" class="btn-gallery" id="viewAllRoses">zobrazit celou galerii</a>
+    </div>
+  </section>
+
+  <!-- ===== DUŠIČKY / PODZIM ===== -->
+  <section id="podzim" class="autumn-gallery section-pink">
+    <div class="container">
+      <h2 class="section-title">Dušičky & <span class="highlight">podzim</span></h2>
+      <p class="section-subtitle">věnce, štoly, svícny, dekorace na dveře</p>
+      <div class="gallery-grid" id="autumnGallery">
+        <img src="img/svicky1.jfif" loading="lazy" alt="dušičkový věnec">
+        <img src="img/venec1.jfif" loading="lazy" alt="svícen s podzimní dekorací">
+        <img src="img/venechero.jfif" loading="lazy" alt="věnec na dveře">
+        <img src="img/svicky2.jfif" loading="lazy" alt="podzimní štola">
+        <img src="img/venec2.jfif" loading="lazy" alt="dýňová dekorace">
+        <img src="img/venec8.jfif" loading="lazy" alt="hrobový věnec">
+        <img src="img/venec5.jfif" loading="lazy" alt="podzimní věnec 2">
+        <img src="img/venec3.jfif" loading="lazy" alt="svícen dýně">
+        <img src="img/venec4.jfif" loading="lazy" alt="věnec na dveře podzim">
+        <img src="img/venec6.jfif" loading="lazy" alt="dušičky dekorace">
+        <img src="img/venec7.jfif" loading="lazy" alt="podzimní dekorace">
+        <img src="img/svicky3.jfif" loading="lazy" alt="svícen podzimní">
+      </div>
+      <a href="#" class="btn-gallery" id="viewAllAutumn">zobrazit celou galerii</a>
+    </div>
+  </section>
+
+  <!-- ===== VIDEOGALERIE ===== -->
+  <section id="videos" class="videos section-padding">
+    <div class="container">
+      <h2 class="section-title">videa · <span class="highlight">tvorba</span></h2>
+      <div class="video-reels">
+        <div class="reel-item" data-video-src="https://www.w3schools.com/html/mov_bbb.mp4">
+          <div class="reel-thumb" style="background-image: url('img/pinkcorona.jfif');">
             <i class="fas fa-play-circle"></i>
           </div>
-          <p>rustikální tabule</p>
+          <p>jak balím růže</p>
         </div>
-        <div class="video-card" data-video-src="https://www.w3schools.com/html/mov_bbb.mp4">
-          <div class="video-thumb" style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format');">
+        <div class="reel-item" data-video-src="https://www.w3schools.com/html/mov_bbb.mp4">
+          <div class="reel-thumb" style="background-image: url('img/venec5.jfif');">
             <i class="fas fa-play-circle"></i>
           </div>
-          <p>svatební kytice</p>
+          <p>věnce na dušičky</p>
         </div>
-        <div class="video-card" data-video-src="https://www.w3schools.com/html/mov_bbb.mp4">
-          <div class="video-thumb" style="background-image: url('https://images.unsplash.com/photo-1599619351208-3e6c839d6828?w=600&auto=format');">
+        <div class="reel-item" data-video-src="https://www.w3schools.com/html/mov_bbb.mp4">
+          <div class="reel-thumb" style="background-image: url('img/visen.jfif');">
             <i class="fas fa-play-circle"></i>
           </div>
-          <p>květinová instalace</p>
+          <p>růže ve skle</p>
         </div>
-        <div class="video-card" data-video-src="https://www.w3schools.com/html/mov_bbb.mp4">
-          <div class="video-thumb" style="background-image: url('https://images.unsplash.com/photo-1567696153798-9111f9cd3d0d?w=600&auto=format');">
+        <div class="reel-item" data-video-src="https://www.w3schools.com/html/mov_bbb.mp4">
+          <div class="reel-thumb" style="background-image: url('img/venec2.jfif');">
             <i class="fas fa-play-circle"></i>
           </div>
-          <p>jarní dekorace</p>
-        </div>
-        <div class="video-card" data-video-src="https://www.w3schools.com/html/mov_bbb.mp4">
-          <div class="video-thumb" style="background-image: url('https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?w=600&auto=format');">
-            <i class="fas fa-play-circle"></i>
-          </div>
-          <p>pivoňková nádhera</p>
-        </div>
-        <div class="video-card" data-video-src="https://www.w3schools.com/html/mov_bbb.mp4">
-          <div class="video-thumb" style="background-image: url('https://images.unsplash.com/photo-1563241527-3004b7be0ffd?w=600&auto=format');">
-            <i class="fas fa-play-circle"></i>
-          </div>
-          <p>zákulisí natáčení</p>
+          <p>podzimní tvorba</p>
         </div>
       </div>
     </div>
   </section>
 
-
-  <!-- ===== KONTAKTNÍ FORMULÁŘ ===== -->
+  <!-- ===== KONTAKT ===== -->
   <section id="contact" class="contact section-padding">
     <div class="container">
-      <h2 class="section-title">napište mi</h2>
-      <p class="section-subtitle">máte otázku nebo nápad? jsem celá uši!</p>
+      <h2 class="section-title">napište <span class="highlight">mi</span></h2>
+      <p class="section-subtitle">jsem tu pro vás</p>
       <div class="contact-wrapper">
-        <form id="contactForm" class="contact-form">
+        <form id="contactForm" class="contact-form" netlify>
           <div class="form-group">
             <label for="name">jméno *</label>
-            <input type="text" id="name" name="name" placeholder="vaše jméno" required>
+            <input type="text" id="name" name="name" required>
           </div>
           <div class="form-group">
             <label for="email">e-mail *</label>
-            <input type="email" id="email" name="email" placeholder="vaše@email.cz" required>
+            <input type="email" id="email" name="email" required>
           </div>
           <div class="form-group">
             <label for="message">zpráva *</label>
-            <textarea id="message" name="message" rows="5" placeholder="co byste chtěli vědět?" required></textarea>
+            <textarea id="message" name="message" rows="4" required></textarea>
           </div>
           <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> odeslat</button>
         </form>
         <div class="contact-info">
-          <h3>nebo mě najdete</h3>
-          <p><i class="fas fa-map-marker-alt"></i> Praha & okolí</p>
-          <p><i class="fas fa-phone-alt"></i> +420 777 123 456</p>
-          <p><i class="fas fa-envelope"></i> ahoj@katysbloom.cz</p>
-          <p class="social-icons">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-whatsapp"></i></a>
-          </p>
+          <h3>Kateřina Slunečková</h3>
+          <p><i class="fas fa-phone-alt"></i> +420 778 033 353 (WhatsApp)</p>
+          <p><i class="fas fa-envelope"></i> katerinasluneckova@email.cz</p>
+          <p><i class="fas fa-truck"></i> ODVOZ po Praze zdarma</p>
+          <p><i class="fas fa-store"></i> Osobní vyzvednutí: Vysočany / Libeň</p>
+          <p><i class="fas fa-clock"></i> Po–So 8–22, Ne zavřeno</p>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/fromkattie" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@fromkattie" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://wa.me/420778033353" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ===== FOOTER ===== -->
-  <footer id="footer">
+  <footer>
     <div class="footer-content">
-      <div class="footer-logo">
-        <i class="fas fa-seedling"></i> Katy's Bloom
-      </div>
-      <div class="social-links">
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
-      </div>
+      <div class="footer-logo"><i class="fas fa-ribbon spinning"></i>fromKattie</div>
       <div class="footer-credit">
-        <p>designed by <span>manuel jordan</span> · © 2026 Katy's Bloom</p>
-        <p><i class="fas fa-heart" style="color:#f28482;"></i> květiny dělají lidi šťastnými</p>
+        <p>&copy; 2026 Kateřina Slunečková · ruční tvorba Praha</p>
       </div>
     </div>
   </footer>
 
-  <!-- ===== LIGHTBOX MODAL ===== -->
-  <div id="videoModal" class="modal">
+  <!-- ===== MODAL ===== -->
+  <div id="modal" class="modal">
     <div class="modal-content">
       <span class="close-modal">&times;</span>
-      <div class="modal-video-container">
-        <video id="modalVideo" controls></video>
-      </div>
+      <img id="modalImage" src="" alt="zvětšený obrázek">
+      <video id="modalVideo" controls style="display: none;"></video>
     </div>
   </div>
 
-  <!-- JavaScript -->
+  <!-- JS -->
   <script src="script.js"></script>
-  <!-- mobilní hamburger menu + formulář -->
-  <script>
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      navMenu.classList.toggle('active');
-    });
-
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('✨ Děkujeme za zprávu! Katy se ozve co nejdříve. (Toto je demo verze, formulář zatím neodesílá e-maily.)');
-      this.reset();
-    });
-  </script>
 </body>
 </html>
