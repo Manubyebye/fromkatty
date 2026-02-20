@@ -1,9 +1,9 @@
 // ===== SLIDESHOW =====
 const slideUrls = [
-  "img/venechero.jfif",
-  "img/svicky2.jfif",
-  "img/recimopink.jfif",
-  "img/bluecorona.jfif"
+  "img/azul marino1.jfif",
+  "img/beachcorazon.jfif",
+  "img/birdazqueenred.jfif",
+  "img/fuxiaa2.jfif"
 ];
 
 let slideIndex = 0;
@@ -72,6 +72,77 @@ function stopAutoSlide() {
 window.changeSlide = changeSlide;
 window.jumpToSlide = jumpToSlide;
 
+// ===== FUNKCE PRO ODSTRANĚNÍ DIAKRITIKY =====
+function removeDiacritics(text) {
+  const diacriticsMap = {
+    'á': 'a', 'č': 'c', 'ď': 'd', 'é': 'e', 'ě': 'e', 'í': 'i', 'ň': 'n',
+    'ó': 'o', 'ř': 'r', 'š': 's', 'ť': 't', 'ú': 'u', 'ů': 'u', 'ý': 'y',
+    'ž': 'z', 'Á': 'A', 'Č': 'C', 'Ď': 'D', 'É': 'E', 'Ě': 'E', 'Í': 'I',
+    'Ň': 'N', 'Ó': 'O', 'Ř': 'R', 'Š': 'S', 'Ť': 'T', 'Ú': 'U', 'Ů': 'U',
+    'Ý': 'Y', 'Ž': 'Z'
+  };
+  
+  return text.replace(/[áčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ]/g, function(match) {
+    return diacriticsMap[match] || match;
+  });
+}
+
+// ===== FUNKCE PRO GENEROVÁNÍ QR KÓDU (PŘESNĚ JAKO QR-PLATBA.CZ) =====
+function generateQRCode(amount, message) {
+  const qrContainer = document.getElementById('qrContainer');
+  
+  // Základní údaje
+  const accountNumber = '2403037528';
+  const bankCode = '2010';
+  const cleanAmount = Math.round(amount);
+  
+  // Vyčištěná zpráva
+  let cleanMessage = removeDiacritics(message);
+  cleanMessage = cleanMessage.replace(/[^A-Z0-9]/g, '');
+  cleanMessage = cleanMessage.substring(0, 16);
+  
+  // PŘESNĚ TA SAMÁ URL JAKO Z QR-PLATBA.CZ
+  const qrUrl = `https://api.paylibo.com/paylibo/generator/czech/image?accountNumber=${accountNumber}&bankCode=${bankCode}&amount=${cleanAmount}&currency=CZK&message=${cleanMessage}`;
+  
+  console.log('QR URL (stejná jako qr-platba.cz):', qrUrl);
+  
+  // Vyčistíme kontejner
+  qrContainer.innerHTML = '';
+  
+  // Vytvoříme QR kód
+  const qrImg = document.createElement('img');
+  qrImg.src = qrUrl;
+  qrImg.alt = "QR kód pro platbu";
+  qrImg.style.maxWidth = '200px';
+  qrImg.style.margin = '0 auto';
+  qrImg.style.display = 'block';
+  qrImg.style.borderRadius = '8px';
+  
+  qrContainer.appendChild(qrImg);
+  
+  // Přidáme textové údaje pro ruční zadání
+  const paymentDetails = document.getElementById('paymentDetails');
+  
+  const oldManual = document.getElementById('manual-payment-info');
+  if (oldManual) oldManual.remove();
+  
+  const manualInfo = document.createElement('div');
+  manualInfo.id = 'manual-payment-info';
+  manualInfo.style.marginTop = '1rem';
+  manualInfo.style.padding = '0.8rem';
+  manualInfo.style.background = '#f9e6e8';
+  manualInfo.style.borderRadius = '20px 6px 20px 6px';
+  manualInfo.style.fontSize = '0.9rem';
+  manualInfo.style.textAlign = 'left';
+  manualInfo.innerHTML = `
+    <p><strong>📱 Platební údaje:</strong></p>
+    <p>Číslo účtu: <strong>${accountNumber}/${bankCode}</strong><br>
+    Částka: <strong>${cleanAmount} Kč</strong><br>
+    Zpráva: <strong>${cleanMessage}</strong></p>
+  `;
+  paymentDetails.appendChild(manualInfo);
+}
+
 // ===== OBJEDNÁVKA RŮŽÍ =====
 document.addEventListener('DOMContentLoaded', () => {
   initSlideshow();
@@ -85,10 +156,8 @@ document.addEventListener('DOMContentLoaded', () => {
     'krémová': 0
   };
   
-  const pricePerPiece = 120; // průměrná cena 100-150 Kč
-  const bankAccount = "2403037528/2010";
+  const pricePerPiece = 120;
   
-  // Mapování barev na obrázky
   const colorImages = {
     'červená': 'img/rojacorona.jfif',
     'růžová': 'img/pinkbonit.jfif',
@@ -96,10 +165,8 @@ document.addEventListener('DOMContentLoaded', () => {
     'krémová': 'img/rosasred.jfif'
   };
 
-  // Výběr barvy pro náhled
   colorItems.forEach(item => {
     item.addEventListener('click', function(e) {
-      // Nechceme přepínat při kliknutí na tlačítka
       if (e.target.classList.contains('counter-btn') || e.target.classList.contains('counter-value')) {
         return;
       }
@@ -107,31 +174,25 @@ document.addEventListener('DOMContentLoaded', () => {
       const color = this.dataset.color;
       const image = this.dataset.image;
       
-      // Odebrat selected ze všech
       colorItems.forEach(i => i.classList.remove('selected'));
-      // Přidat selected aktuálnímu
       this.classList.add('selected');
       
-      // Změnit náhledový obrázek
       if (image) {
         previewRose.src = image;
       }
     });
   });
 
-  // Čítače pro každou barvu
   document.querySelectorAll('.counter-btn.plus').forEach(btn => {
     btn.addEventListener('click', function() {
       const color = this.dataset.color;
       counterValues[color]++;
       document.getElementById(`count-${color}`).textContent = counterValues[color];
       
-      // Aktualizovat náhled na tuto barvu
       if (colorImages[color]) {
         previewRose.src = colorImages[color];
       }
       
-      // Označit vybranou barvu
       colorItems.forEach(i => i.classList.remove('selected'));
       document.querySelector(`.color-item[data-color="${color}"]`).classList.add('selected');
       
@@ -158,7 +219,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('totalPrice').textContent = totalPrice;
   }
 
-  // Generování objednávky
   document.getElementById('generateOrder').addEventListener('click', function() {
     const totalCount = Object.values(counterValues).reduce((a, b) => a + b, 0);
     
@@ -169,45 +229,30 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const totalPrice = totalCount * pricePerPiece;
     
-    // Sestavit objednávkový řetězec
     const orderItems = [];
     for (const [color, count] of Object.entries(counterValues)) {
       if (count > 0) {
-        orderItems.push(`${count}x ${color}`);
+        let colorLetter = '';
+        if (color === 'červená') colorLetter = 'C';
+        else if (color === 'růžová') colorLetter = 'R';
+        else if (color === 'bílá') colorLetter = 'B';
+        else if (color === 'krémová') colorLetter = 'K';
+        
+        orderItems.push(`${count}${colorLetter}`);
       }
     }
     
-    const orderRef = `RŮŽE-${orderItems.join('-')}`;
+    const orderRef = `RUZE${orderItems.join('')}`;
     document.getElementById('orderReference').textContent = orderRef;
     
-    // Vytvořit QR kód pro platbu
     generateQRCode(totalPrice, orderRef);
     
-    // Zobrazit platební údaje
     document.getElementById('paymentDetails').style.display = 'block';
     
-    // Scroll k platebním údajům
     setTimeout(() => {
       document.getElementById('paymentDetails').scrollIntoView({ behavior: 'smooth', block: 'center' });
     }, 100);
   });
-
-  // ===== FUNKCE PRO GENEROVÁNÍ QR KÓDU =====
-  function generateQRCode(amount, message) {
-    const qrImg = document.getElementById('qrImage');
-    
-    // Formát pro Fio banku - Standard pro české banky (SPD)
-    // Číslo účtu: 2403037528/2010 -> IBAN: CZ4520100000002403037528
-    const iban = 'CZ4520100000002403037528';
-    
-    // Vytvoření QR platby ve formátu českého standardu
-    const qrData = `SPD*1.0*ACC:${iban}*AM:${amount}*CC:CZK*MSG:${message}`;
-    
-    // Použití API pro generování QR kódu
-    qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(qrData)}`;
-    
-    console.log('QR Data:', qrData); // Pro kontrolu
-  }
 
   // ===== MODAL PRO OBRÁZKY A VIDEA =====
   const modal = document.getElementById('modal');
@@ -215,7 +260,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalVideo = document.getElementById('modalVideo');
   const closeModal = document.querySelector('.close-modal');
 
-  // Otevření obrázků v galerii
   document.querySelectorAll('.gallery-grid img').forEach(img => {
     img.addEventListener('click', function() {
       modalImg.src = this.src;
@@ -225,7 +269,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Otevření videí
   document.querySelectorAll('.reel-item').forEach(item => {
     item.addEventListener('click', function() {
       const videoSrc = this.dataset.videoSrc;
@@ -239,7 +282,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Zavření modalu
   closeModal.addEventListener('click', () => {
     modal.style.display = 'none';
     modalVideo.pause();
@@ -257,15 +299,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===== ZOBRAZIT CELOU GALERII =====
   document.getElementById('viewAllRoses').addEventListener('click', function(e) {
     e.preventDefault();
-    const gallery = document.getElementById('roseGallery');
-    // Zde by byla logika pro zobrazení skrytých obrázků
     this.style.opacity = '0.5';
     this.textContent = 'všechny obrázky zobrazeny';
   });
 
   document.getElementById('viewAllAutumn').addEventListener('click', function(e) {
     e.preventDefault();
-    const gallery = document.getElementById('autumnGallery');
     this.style.opacity = '0.5';
     this.textContent = 'všechny obrázky zobrazeny';
   });
@@ -279,7 +318,6 @@ document.addEventListener('DOMContentLoaded', () => {
     navMenu.classList.toggle('active');
   });
 
-  // Zavření menu po kliknutí na odkaz
   document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
       hamburger.classList.remove('active');
@@ -287,31 +325,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-    // ===== FORMULÁŘ PRO NETLIFY =====
+  // ===== FORMULÁŘ PRO NETLIFY =====
   const contactForm = document.getElementById('contactForm');
   
   if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
-      // Don't prevent default - let Netlify handle it
-      // Just show a loading state or success message
-      
-      // Optional: Show loading state
       const submitBtn = this.querySelector('.btn-submit');
       const originalText = submitBtn.innerHTML;
+      
       submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> odesílám...';
       submitBtn.disabled = true;
       
-      // Netlify will handle the rest
-      // The page will redirect to a success page or show Netlify's default success message
-      
-      // Re-enable after 3 seconds in case of error (optional)
       setTimeout(() => {
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
-      }, 3000);
+      }, 5000);
     });
   }
-
 
   // ===== FADE-IN EFFECT =====
   const sections = document.querySelectorAll('section');

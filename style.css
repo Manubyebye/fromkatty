@@ -594,15 +594,17 @@ h1, h2, h3, h4 {
 }
 
 .payment-details img {
-  max-width: 150px;
+  max-width: 200px;
   margin: 1rem auto;
-  border-radius: 15px;
+  border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 #qrContainer {
   display: flex;
   justify-content: center;
+  min-height: 200px;
+  align-items: center;
 }
 
 /* ----- galerie ----- */

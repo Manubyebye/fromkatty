@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fromKattie · fotogalerie</title>
+  <!-- SEO meta -->
+  <meta name="description" content="Fotogalerie ručně vázaných stuhových růží, dušičkových věnců a podzimních dekorací od Kateřiny Slunečkové.">
+  <meta name="keywords" content="fotogalerie, stuhové růže, saténové růže, dušičkové věnce, svícny, dekorace, Praha, fromkattie">
+  <meta name="author" content="Kateřina Slunečková - fromKattie">
+  <!-- favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='30' fill='%23f4a3a3'/%3E%3Cpath d='M35 30 Q50 10 65 30 Q70 45 50 60 Q30 45 35 30' fill='%23d9648c'/%3E%3C/svg%3E">
+  <!-- Google Fonts + Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- gallery CSS -->
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html"><i class="fas fa-ribbon"></i> fromKattie</a>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Domů</a></li>
+        <li><a href="index.html#about">O mně</a></li>
+        <li><a href="index.html#services">Co tvořím</a></li>
+        <li><a href="index.html#ruze">Růže · objednat</a></li>
+        <li><a href="gallery.html" class="active">Fotogalerie</a></li>
+        <li><a href="index.html#podzim">Dušičky & podzim</a></li>
+        <li><a href="index.html#videos">Videa</a></li>
+        <li><a href="index.html#contact">Kontakt</a></li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== GALERIE HERO ===== -->
+  <section class="gallery-hero">
+    <div class="hero-image" style="background-image: url('https://images.unsplash.com/photo-1563241527-3004b7be0ffd?w=1200');"></div>
+    <div class="hero-overlay">
+      <h1 class="hero-title">foto<span class="highlight">galerie</span></h1>
+      <p class="hero-subtitle">prohlédněte si mou tvorbu</p>
+    </div>
+  </section>
+
+  <!-- ===== FILTER TABS ===== -->
+  <div class="gallery-filter">
+    <div class="container">
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">Všechny (45+)</button>
+        <button class="filter-btn" data-filter="ruze">Saténové růže</button>
+        <button class="filter-btn" data-filter="dusicky">Dušičky & podzim</button>
+        <button class="filter-btn" data-filter="aranze">Aranžmá & dárky</button>
+        <button class="filter-btn" data-filter="kytice">Kytice & vázy</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== GALERIE MŘÍŽKA - 45+ OBRÁZKŮ ===== -->
+  <section class="gallery-section">
+    <div class="container">
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- ===== SATÉNOVÉ RŮŽE (ruze) - 15 OBRÁZKŮ ===== -->
+        <!-- Růže 1 -->
+        <div class="gallery-item" data-category="ruze">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Červená růže">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Červená růže</span>
+          </div>
+        </div>
+        <!-- Růže 2 -->
+        <div class="gallery-item" data-category="ruze">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Růžová růže">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Růžová růže</span>
+          </div>
+        </div>
+        <!-- Růže 3 -->
+        <div class="gallery-item" data-category="ruze">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Bílá růže">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Bílá růže</span>
+          </div>
+        </div>
+        <!-- Růže 4 -->
+        <div class="gallery-item" data-category="ruze">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Krémová růže">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Krémová růže</span>
+          </div>
+        </div>
+        <!-- Růže 5 -->
+        <div class="gallery-item" data-category="ruze">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Růže v krabici">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Růže v krabici</span>
+          </div>
+        </div>
+        <!-- Růže 6 -->
+        <div class="gallery-item" data-category="ruze">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Růžová kytice">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Růžová kytice</span>
+          </div>
+        </div>
+        <!-- Růže 7 -->
+        <div class="gallery-item" data-category="ruze">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Růže bonita">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Růže bonita</span>
+          </div>
+        </div>
+        <!-- Růže 8 -->
+        <div class="gallery-item" data-category="ruze">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Kytice růží">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Kytice růží</span>
+          </div>
+        </div>
+        <!-- Růže 9 -->
+        <div class="gallery-item" data-category="ruze">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Růže detail">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Růže detail</span>
+          </div>
+        </div>
+        <!-- Růže 10 -->
+        <div class="gallery-item" data-category="ruze">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Růže ve skle">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Růže ve skle</span>
+          </div>
+        </div>
+        <!-- Růže 11 -->
+        <div class="gallery-item" data-category="ruze">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Dárková krabice">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Dárková krabice</span>
+          </div>
+        </div>
+        <!-- Růže 12 -->
+        <div class="gallery-item" data-category="ruze">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Aranžmá z růží">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Aranžmá z růží</span>
+          </div>
+        </div>
+        <!-- Růže 13 -->
+        <div class="gallery-item" data-category="ruze">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Červená kytice">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Červená kytice</span>
+          </div>
+        </div>
+        <!-- Růže 14 -->
+        <div class="gallery-item" data-category="ruze">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Růžové aroma">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Růžové aroma</span>
+          </div>
+        </div>
+        <!-- Růže 15 -->
+        <div class="gallery-item" data-category="ruze">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Bílá krása">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Bílá krása</span>
+          </div>
+        </div>
+
+        <!-- ===== DUŠIČKY & PODZIM (dusicky) - 15 OBRÁZKŮ ===== -->
+        <!-- Dušičky 1 -->
+        <div class="gallery-item" data-category="dusicky">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Dušičkový věnec">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Dušičkový věnec</span>
+          </div>
+        </div>
+        <!-- Dušičky 2 -->
+        <div class="gallery-item" data-category="dusicky">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Svícen s dekorací">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Svícen s dekorací</span>
+          </div>
+        </div>
+        <!-- Dušičky 3 -->
+        <div class="gallery-item" data-category="dusicky">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Věnec na dveře">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Věnec na dveře</span>
+          </div>
+        </div>
+        <!-- Dušičky 4 -->
+        <div class="gallery-item" data-category="dusicky">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Podzimní štola">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Podzimní štola</span>
+          </div>
+        </div>
+        <!-- Dušičky 5 -->
+        <div class="gallery-item" data-category="dusicky">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Dýňová dekorace">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Dýňová dekorace</span>
+          </div>
+        </div>
+        <!-- Dušičky 6 -->
+        <div class="gallery-item" data-category="dusicky">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Hrobový věnec">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Hrobový věnec</span>
+          </div>
+        </div>
+        <!-- Dušičky 7 -->
+        <div class="gallery-item" data-category="dusicky">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Podzimní věnec">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Podzimní věnec</span>
+          </div>
+        </div>
+        <!-- Dušičky 8 -->
+        <div class="gallery-item" data-category="dusicky">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Svícen dýně">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Svícen dýně</span>
+          </div>
+        </div>
+        <!-- Dušičky 9 -->
+        <div class="gallery-item" data-category="dusicky">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Dveřní věnec">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Dveřní věnec</span>
+          </div>
+        </div>
+        <!-- Dušičky 10 -->
+        <div class="gallery-item" data-category="dusicky">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Dušičková dekorace">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Dušičková dekorace</span>
+          </div>
+        </div>
+        <!-- Dušičky 11 -->
+        <div class="gallery-item" data-category="dusicky">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Podzimní dekorace">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Podzimní dekorace</span>
+          </div>
+        </div>
+        <!-- Dušičky 12 -->
+        <div class="gallery-item" data-category="dusicky">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Podzimní svícen">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Podzimní svícen</span>
+          </div>
+        </div>
+        <!-- Dušičky 13 -->
+        <div class="gallery-item" data-category="dusicky">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Věnec s chryzantémami">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Věnec s chryzantémami</span>
+          </div>
+        </div>
+        <!-- Dušičky 14 -->
+        <div class="gallery-item" data-category="dusicky">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Podzimní aranžmá">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Podzimní aranžmá</span>
+          </div>
+        </div>
+        <!-- Dušičky 15 -->
+        <div class="gallery-item" data-category="dusicky">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Svícen s listím">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Svícen s listím</span>
+          </div>
+        </div>
+
+        <!-- ===== ARANŽMÁ & DÁRKY (aranze) - 10 OBRÁZKŮ ===== -->
+        <!-- Aranžmá 1 -->
+        <div class="gallery-item" data-category="aranze">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Kytice">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Kytice</span>
+          </div>
+        </div>
+        <!-- Aranžmá 2 -->
+        <div class="gallery-item" data-category="aranze">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Dárková krabice">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Dárková krabice</span>
+          </div>
+        </div>
+        <!-- Aranžmá 3 -->
+        <div class="gallery-item" data-category="aranze">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Aranžmá">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Aranžmá</span>
+          </div>
+        </div>
+        <!-- Aranžmá 4 -->
+        <div class="gallery-item" data-category="aranze">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Růže ve skle">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Růže ve skle</span>
+          </div>
+        </div>
+        <!-- Aranžmá 5 -->
+        <div class="gallery-item" data-category="aranze">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Krabice s růžemi">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Krabice s růžemi</span>
+          </div>
+        </div>
+        <!-- Aranžmá 6 -->
+        <div class="gallery-item" data-category="aranze">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Květinová dekorace">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Květinová dekorace</span>
+          </div>
+        </div>
+        <!-- Aranžmá 7 -->
+        <div class="gallery-item" data-category="aranze">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Dekorace na stůl">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Dekorace na stůl</span>
+          </div>
+        </div>
+        <!-- Aranžmá 8 -->
+        <div class="gallery-item" data-category="aranze">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Svatební dekorace">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Svatební dekorace</span>
+          </div>
+        </div>
+        <!-- Aranžmá 9 -->
+        <div class="gallery-item" data-category="aranze">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Dárkový box">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Dárkový box</span>
+          </div>
+        </div>
+        <!-- Aranžmá 10 -->
+        <div class="gallery-item" data-category="aranze">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Kytice v krabici">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Kytice v krabici</span>
+          </div>
+        </div>
+
+        <!-- ===== KYTICE & VÁZY (kytice) - 10 OBRÁZKŮ ===== -->
+        <!-- Kytice 1 -->
+        <div class="gallery-item" data-category="kytice">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Letní kytice">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Letní kytice</span>
+          </div>
+        </div>
+        <!-- Kytice 2 -->
+        <div class="gallery-item" data-category="kytice">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Růžová kytice">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Růžová kytice</span>
+          </div>
+        </div>
+        <!-- Kytice 3 -->
+        <div class="gallery-item" data-category="kytice">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Kytice ve váze">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Kytice ve váze</span>
+          </div>
+        </div>
+        <!-- Kytice 4 -->
+        <div class="gallery-item" data-category="kytice">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Bílá kytice">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Bílá kytice</span>
+          </div>
+        </div>
+        <!-- Kytice 5 -->
+        <div class="gallery-item" data-category="kytice">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Pastelová kytice">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Pastelová kytice</span>
+          </div>
+        </div>
+        <!-- Kytice 6 -->
+        <div class="gallery-item" data-category="kytice">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Váza s růžemi">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Váza s růžemi</span>
+          </div>
+        </div>
+        <!-- Kytice 7 -->
+        <div class="gallery-item" data-category="kytice">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Smíšená kytice">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Smíšená kytice</span>
+          </div>
+        </div>
+        <!-- Kytice 8 -->
+        <div class="gallery-item" data-category="kytice">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Kytice k narozeninám">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Kytice k narozeninám</span>
+          </div>
+        </div>
+        <!-- Kytice 9 -->
+        <div class="gallery-item" data-category="kytice">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Vintage kytice">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Vintage kytice</span>
+          </div>
+        </div>
+        <!-- Kytice 10 -->
+        <div class="gallery-item" data-category="kytice">
+          <img src="img/placeholder.jpg" loading="lazy" alt="Kytice v dárkovém balení">
+          <div class="overlay">
+            <i class="fas fa-search-plus"></i>
+            <span>Kytice v dárkovém balení</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MODAL PRO ZVĚTŠENÍ ===== -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <img id="modalImage" src="" alt="Zvětšený obrázek">
+      <p id="modalCaption"></p>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo"><i class="fas fa-ribbon spinning"></i> fromKattie</div>
+      <div class="footer-credit">
+        <p>&copy; 2026 Kateřina Slunečková · ruční tvorba Praha</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== GALERIE SCRIPT ===== -->
+  <script src="gallery.js"></script>
+</body>
+</html>
