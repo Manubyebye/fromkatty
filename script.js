@@ -87,7 +87,7 @@ function removeDiacritics(text) {
   });
 }
 
-// ===== FUNKCE PRO GENEROVÁNÍ QR KÓDU (PŘESNĚ JAKO QR-PLATBA.CZ) =====
+// ===== FUNKCE PRO GENEROVÁNÍ QR KÓDU =====
 function generateQRCode(amount, message) {
   const qrContainer = document.getElementById('qrContainer');
   
@@ -101,10 +101,10 @@ function generateQRCode(amount, message) {
   cleanMessage = cleanMessage.replace(/[^A-Z0-9]/g, '');
   cleanMessage = cleanMessage.substring(0, 16);
   
-  // PŘESNĚ TA SAMÁ URL JAKO Z QR-PLATBA.CZ
+  // URL z qr-platba.cz
   const qrUrl = `https://api.paylibo.com/paylibo/generator/czech/image?accountNumber=${accountNumber}&bankCode=${bankCode}&amount=${cleanAmount}&currency=CZK&message=${cleanMessage}`;
   
-  console.log('QR URL (stejná jako qr-platba.cz):', qrUrl);
+  console.log('QR URL:', qrUrl);
   
   // Vyčistíme kontejner
   qrContainer.innerHTML = '';
@@ -120,7 +120,7 @@ function generateQRCode(amount, message) {
   
   qrContainer.appendChild(qrImg);
   
-  // Přidáme textové údaje pro ruční zadání
+  // Přidáme textové údaje
   const paymentDetails = document.getElementById('paymentDetails');
   
   const oldManual = document.getElementById('manual-payment-info');
@@ -153,7 +153,11 @@ document.addEventListener('DOMContentLoaded', () => {
     'červená': 0,
     'růžová': 0,
     'bílá': 0,
-    'krémová': 0
+    'krémová': 0,
+    'modrá': 0,
+    'béžová': 0,
+    'oranžová': 0,
+    'mint': 0
   };
   
   const pricePerPiece = 120;
@@ -162,7 +166,11 @@ document.addEventListener('DOMContentLoaded', () => {
     'červená': 'img/rojacorona.jfif',
     'růžová': 'img/pinkbonit.jfif',
     'bílá': 'img/redlove.jfif',
-    'krémová': 'img/rosasred.jfif'
+    'krémová': 'img/rosasred.jfif',
+    'modrá': 'img/bluecorona.jfif',
+    'béžová': 'img/beachcorazon.jfif',
+    'oranžová': 'img/oranzova.jfif',
+    'mint': 'img/fuxiaa2.jfif'
   };
 
   colorItems.forEach(item => {
@@ -237,6 +245,10 @@ document.addEventListener('DOMContentLoaded', () => {
         else if (color === 'růžová') colorLetter = 'R';
         else if (color === 'bílá') colorLetter = 'B';
         else if (color === 'krémová') colorLetter = 'K';
+        else if (color === 'modrá') colorLetter = 'M';
+        else if (color === 'béžová') colorLetter = 'BE';
+        else if (color === 'oranžová') colorLetter = 'O';
+        else if (color === 'mint') colorLetter = 'MI';
         
         orderItems.push(`${count}${colorLetter}`);
       }
@@ -278,6 +290,8 @@ document.addEventListener('DOMContentLoaded', () => {
         modalImg.style.display = 'none';
         modal.style.display = 'flex';
         modalVideo.play();
+      } else {
+        alert('Video bude přidáno brzy!');
       }
     });
   });
@@ -294,19 +308,6 @@ document.addEventListener('DOMContentLoaded', () => {
       modalVideo.pause();
       modalVideo.src = '';
     }
-  });
-
-  // ===== ZOBRAZIT CELOU GALERII =====
-  document.getElementById('viewAllRoses').addEventListener('click', function(e) {
-    e.preventDefault();
-    this.style.opacity = '0.5';
-    this.textContent = 'všechny obrázky zobrazeny';
-  });
-
-  document.getElementById('viewAllAutumn').addEventListener('click', function(e) {
-    e.preventDefault();
-    this.style.opacity = '0.5';
-    this.textContent = 'všechny obrázky zobrazeny';
   });
 
   // ===== HAMBURGER MENU =====
