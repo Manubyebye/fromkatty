@@ -160,8 +160,8 @@ document.addEventListener('DOMContentLoaded', () => {
     'mint': 0
   };
   
-  // Price per rose - 50 Kč
-  const pricePerPiece = 50;
+  // Price per rose - changed from 50 to 59 Kč
+  const pricePerPiece = 59;
   
   // Updated image paths
   const colorImages = {
