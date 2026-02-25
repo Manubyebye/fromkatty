@@ -160,16 +160,18 @@ document.addEventListener('DOMContentLoaded', () => {
     'mint': 0
   };
   
-  const pricePerPiece = 120;
+  // Price per rose - 50 Kč
+  const pricePerPiece = 50;
   
+  // Updated image paths
   const colorImages = {
     'červená': 'img/rojacorona.jfif',
     'růžová': 'img/pinkbonit.jfif',
-    'bílá': 'img/redlove.jfif',
-    'krémová': 'img/rosasred.jfif',
+    'bílá': 'img/white11.jfif',
+    'krémová': 'img/beaich1.jfif',
     'modrá': 'img/bluecorona.jfif',
     'béžová': 'img/beachcorazon.jfif',
-    'oranžová': 'img/oranzova.jfif',
+    'oranžová': 'img/beachoragnelove.jfif',
     'mint': 'img/fuxiaa2.jfif'
   };
 

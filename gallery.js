@@ -126,22 +126,6 @@ images.forEach(img => {
   imageObserver.observe(img);
 });
 
-// ===== IMAGE COUNTER =====
-function updateImageCounter() {
-  const totalImages = galleryItems.length;
-  const container = document.querySelector('.gallery-filter .container');
-  
-  const existingCounter = document.querySelector('.image-counter');
-  if (existingCounter) existingCounter.remove();
-  
-  const counter = document.createElement('div');
-  counter.className = 'image-counter';
-  counter.innerHTML = `<i class="fas fa-images"></i> ${totalImages} fotografií`;
-  container.appendChild(counter);
-}
-
-updateImageCounter();
-
 // ===== SMOOTH SCROLL TO TOP =====
 const scrollTopBtn = document.createElement('button');
 scrollTopBtn.className = 'scroll-top';
@@ -159,3 +143,7 @@ window.addEventListener('scroll', () => {
     scrollTopBtn.style.display = 'none';
   }
 });
+
+// ===== INITIAL FILTER CHECK =====
+// Ensure all items are visible initially
+filterItems('all');
